@@ -1,10 +1,10 @@
 server:
-  port: 8080
+  port: 8081
   servlet:
     session:
       cookie:
         http-only: true
-        secure: false   # cámbialo a true cuando uses HTTPS
+        secure: false # cámbialo a true cuando uses HTTPS
         same-site: strict
 
 spring:
@@ -16,8 +16,8 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update   # crea/actualiza tablas automáticamente
-    show-sql: true       # muestra SQL en consola
+      ddl-auto: update # crea/actualiza tablas automáticamente
+    show-sql: true # muestra SQL en consola
     properties:
       hibernate:
         format_sql: true
@@ -25,7 +25,11 @@ spring:
   h2:
     console:
       enabled: true
-      path: /h2-console   # consola accesible en http://localhost:8080/h2-console
+      path: /h2-console # consola accesible en http://localhost:8080/h2-console
+
+jwt:
+  secret: "MDEyMzQ1Njc4OUFCQ0RFRjAxMjM0NTY3ODlBQkNERUYwMTIzNDU2Nzg5QUJDREVGMDEyMzQ1Njc4OQ=="
+  expiration-ms: 3600000
 
 logging:
   level:
